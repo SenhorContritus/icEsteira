@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteira IOT</title>
+</head>
+<body>
+
+    <p id="s-stats">
+
+        SERVER:OFFLINE
+    </p>
+    <input id="id"type="text" placeholder="id">
+    <input id="password" type="password" placeholder="password">
+    <input id="btLogin" type="button" value="a" onclick="submit()">
+
+    <ul id="lista" style="display: none;">
+        <li><div>Total: <span id="qnt-objetos"></span></div></li>
+        <li><div>Azul: <span id="qnt-azul"></span></div></li>
+        <li><div>Vermelho: <span id="qnt-vermelho"></span></div></li>
+        <li><div>Verde: <span id="qnt-verde"></span></div></li>
+        <li><div>Tempo restante: <span id="tempo-dec"></span></div></li>
+    </ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+   
+</body>
+</html>
