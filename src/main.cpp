@@ -1,12 +1,14 @@
 #include<Arduino.h>
 #include <LiquidCrystal_I2C.h>
+#include <Adafruit_TCS34725.h>
 #define ftr 0
 #define cSens 2
 
-
+double r, g, b;
 int qnt = 0;
 
 LiquidCrystal_I2C lcd(0x27,20,4);
+Adafruit_TCS34725 tcs(0x29);
 
 void initLcd(){
   lcd.init();
@@ -21,13 +23,14 @@ void initLcd(){
 
 String verifyColor(int d){
   delay(d);
-  if(cSens == 1){
+  tcs.getRGB(&red, &green, &blue);
+  if(red > green && red > blue){
   	return  "Vermelho";
   }
-  if(cSens == 2){
+  if(green > red && green > blue){
   	return "Verde";
   }
-  if(cSens == 3){
+  if(blue > red && blue > green){
     return "Azul";
   }
   else{
@@ -52,6 +55,8 @@ void setup()
 {
   initLcd();
   Serial.begin(9600);
+  tcs.begin();
+
 }
 
 void loop()
