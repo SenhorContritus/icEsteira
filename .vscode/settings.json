@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
     "C_Cpp.errorSquiggles": "disabled",
     "cmake.sourceDirectory": "C:/Users/perei/Documents/icEsteira/lib/Adafruit_TCS34725-1.4.4"
+=======
+    "C_Cpp.errorSquiggles": "disabled"
+>>>>>>> 7109fa0 (color sensor config)
 }
