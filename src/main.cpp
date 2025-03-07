@@ -23,6 +23,7 @@ void initLcd(){
 
 String verifyColor(int d){
   delay(d);
+  float red, green, blue;
   tcs.getRGB(&red, &green, &blue);
   if(red > green && red > blue){
   	return  "Vermelho";
@@ -62,12 +63,14 @@ void setup()
 void loop()
 {
   int ldr = analogRead(ftr);
-  if(ldr< 160){
+
+  if(ldr> 80){
     qnt++;
-    showData(qnt, 200);
-    while(ldr < 160){
+    showData(qnt, 680);
+    while(ldr > 80){
       ldr = analogRead(ftr);
     }
   }	
+    
   
 }
