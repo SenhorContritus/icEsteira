@@ -34,7 +34,7 @@ void initLcd(){
 }
  
 // Função que faz a verificação da cor do objeto detectado no ftr
-String verifyColor(int d){]
+String verifyColor(int d){
 
   delay(d);// Tempo necessário para o objeto chegar no sensor de cor
 
